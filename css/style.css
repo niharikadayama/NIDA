@@ -65,6 +65,7 @@ header{
     background-color: var(--secondary-color);
     color: var(--primary-color);
     padding: 0.5rem;
+    border-radius: 50%;
 }
 /* navbar styling end */
 
@@ -82,6 +83,9 @@ header{
 }
 #section-1 .container h1{
    font-size: 4rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
    margin-top: 200px;
    color: var(--dark-color);
    opacity: 0.8;
@@ -122,16 +126,27 @@ header{
 /* section-3 discount card styling  */
 #section-3 .row{
     padding: 1rem;
-    display: flex;
+    width: 100%;
 }
 #section-3  .column{
     display: flex;
     background: var(--card-color);
+    
 }
 #section-3 .column .column-1{
-   align-items: center;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
+#section-3 .column .column-1 img{
+    width: 100%;
+}
+
+
 #section-3 .column .column-2{
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -165,16 +180,18 @@ header{
     text-align: center;
 }
 #section-4 .row{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    
+    display: flex;
+    justify-content: space-around;
     padding: 1rem;
-
+    flex: 1;
+}
+#section-4 .column{
+    display: flex;
+    flex-direction: column;
 }
 #section-4 .column img{
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 400px;
+    width: 100%;
+    padding: 1rem;
 }
 #section-4 .column img:hover{
     opacity: 0.8;
@@ -200,23 +217,26 @@ header{
     background-color: var(--card-color);
 }
 .display .row{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+    display: flex;
+    justify-content: space-around;
     padding: 1rem;
 }
+.display .column{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+}
 .display .column img{
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 370px;
+    width: 100%;
 }
 .display .column img:hover{
     opacity: 0.9;
 }
 .column .details{
-   width: 370px;
+   width: 100%;
    display: flex;
-   /* align-items: center; */
-   justify-content: space-between;
+   justify-content: space-around;
 }
 .column .details:hover{
     cursor: pointer;
@@ -248,10 +268,18 @@ footer{
     background-color: var(--card-color);
     color: var(--footer-font-color);
     height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
-footer img{
+.footer-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-logo img{
     width: 300px;
-    margin: 0 0 0 500px;
+    margin: 0.5rem 0;
 }
 .footer-col{
     display: flex; 
@@ -277,16 +305,14 @@ footer img{
     display: flex;
     text-align: center;
     align-items: center;
-    justify-content: space-between;
-    margin: 0 10%;
+    justify-content: space-around;
 }
 .footer-row .mail h4{
     display: inline;
-    margin: 0 1rem;
+    /* margin: 0 1rem; */
 }
 .footer-row .mail input{
     padding: 0.5rem;
-    width: 250px;
     margin: 0 0.25rem;
 }
 .footer-row .handles i{
@@ -300,3 +326,246 @@ footer p{
     margin-top: 0.75rem;
 }
 /* footer styling end */
+
+
+
+
+
+/* ------------------------- */
+
+/* -------for tablets -------*/
+@media(max-width:768px){
+
+/* navbar styling code */
+header{
+    padding: 0;
+}
+.logo{
+   height: 80%;
+   padding: 0 1rem;
+}
+.logo img{
+    width: 200px;
+}
+/* navbar styling end */
+
+/* section-1 styling */
+#section-1{
+    height: 50vh;
+  }
+  #section-1 .container h1{
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+    color: var(--dark-color);
+    opacity: 0.8;
+    padding: 0.5rem;
+    background-color: var(--primary-color);
+ }
+ #section-1 .container p{
+     color: var(--light-color);
+     background: var(--dark-color);
+     opacity: 0.9;
+     margin-top: 20px;
+     font-size: 19px;
+     padding: 0.5rem;
+ }
+  /* section-1 styling end */
+
+/* section-3 discount card styling  */
+
+#section-3  .column{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+#section-3 .column .column-1{
+    width: 100%;
+}
+#section-3 .column .column-1 img{
+   width: 400px;
+   padding: 0.5rem;
+}
+#section-3 .column .column-2{
+    padding: 0.75rem;
+    width: 100%;
+}
+ .column-2 h2{
+    margin-bottom: 0.5rem;
+}
+/* section-3 discount card styling ends */
+
+/* display section styling (men&women)*/
+.display .row{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    padding: 0.5rem;
+}
+.display .column{
+    padding: 0;
+}
+.display .column img{
+    width: 200px;
+}
+.column .details{
+   width: 220px;
+}
+.details h2{
+    font-size: 17px;
+}
+.details p{
+    font-size: 14px;
+}
+.details h4{
+    font-size: 15px;
+}
+.details span{
+    display: block;
+}
+/* display styling end */
+
+/* footer styling */
+
+.footer-row{
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 5%;
+}
+.footer-row .mail h4{
+    display: block;
+    margin: 0;
+}
+.footer-row .handles{
+    margin: 20px 0;
+}
+footer p{
+    margin-top: -5px;
+}
+/* footer styling end */
+}
+
+
+
+
+
+/* --------mobile------- */
+@media(max-width:500px){
+/* navbar */
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    padding: 0.25rem;
+}
+
+.logo{
+   height: 100%;
+}
+.logo img{
+    width: 200px;
+}
+.navbar ul li {
+    padding:0 0.5rem;
+}
+.navbar ul li a i{
+    font-size: 20px;
+}
+/* navbar styling end */
+
+/* section-1 styling */
+  #section-1 .container h1{
+     font-size: 2rem;
+     margin-top: 150px;
+  }
+  #section-1 .container p{
+      font-size: 18px;
+  }
+  /* section-1 styling end */
+  
+  /* section-2 card styling */
+  #section-2 .container{
+      padding: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  .container .card{
+      padding: 1rem;
+      width: 100%;
+  }
+  /* section-2 card styling end */
+  
+  /* section-3 discount card styling  */
+  #section-3  .column{
+      display: flex;
+      flex-direction: column; 
+  }
+  #section-3 .column .column-1{
+      width: 100%;
+  }
+  #section-3 .column .column-1 img{
+      width: 100%;
+  }
+  #section-3 .column .column-2{
+      width: 100%;
+   }
+   .column-2 h2{
+      font-size: 1.5rem;
+   }
+   .column-2 p{
+      margin-bottom: 0.25rem;
+   }
+  /* section-3 discount card styling ends */
+  
+  /* section-4 category of cloth section */
+  #section-4 .row{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+  /* section-4 category of cloth section end*/
+  
+  /* display section styling (men&women)*/
+  .display .row{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  .display .column{
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      width: 80%;
+  }
+  .display .column img{
+      width: 100%;
+  }
+  .column .details{
+     width: 100%;
+     display: flex;
+     align-items: flex-start;
+     justify-content: space-around;
+  }
+  
+  /* display styling end */
+  
+  /* footer styling */
+  .footer-col{
+      display: flex; 
+      flex-direction: column;
+      margin: 0.5rem;
+      border-bottom: 2px solid var(--footer-font-color);
+      
+  }
+  /* footer styling end */
+}
