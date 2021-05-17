@@ -1,0 +1,302 @@
+/* Primary styling */
+:root{
+    --primary-color:#F8F6D8;
+    --secondary-color: #D5BC90;
+    --card-color:#c5a265;
+    --light-color: white;
+    --dark-color: #69542e;
+    --skin-color: #d6b478;
+    --brown-color:#7F5217;
+    --footer-font-color:#F5EFE4;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    background-color: var(--primary-color);
+}
+.btn{
+    margin-top: 1rem;
+    background: var(--dark-color);
+    color: var(--light-color);
+    padding: 0.5rem;
+    border: none;
+}
+.btn:hover{
+    opacity: 0.8;
+}
+
+/* navbar styling code */
+header{
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    padding: 1rem;
+    position: fixed;
+    z-index: 1;
+}
+
+.logo{
+   height: 100%;
+}
+.logo img{
+    width: 200px;
+}
+.navbar ul li {
+    display: inline-block;
+    text-align: center;
+    list-style: none;
+    padding: 0.5rem;
+}
+.navbar ul li a{
+    text-decoration: none;
+    text-align: center;
+    color: var(--secondary-color);
+    padding: 0.75rem;
+}
+.navbar ul li a i:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 0.5rem;
+}
+/* navbar styling end */
+
+/* section-1 styling */
+#section-1{
+  background:url(../img/home-6.jpg) no-repeat center center/cover ;
+  height: 70vh;
+}
+#section-1 .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#section-1 .container h1{
+   font-size: 4rem;
+   margin-top: 200px;
+   color: var(--dark-color);
+   opacity: 0.8;
+   padding: 0.5rem;
+   background-color: var(--primary-color);
+}
+#section-1 .container p{
+    color: var(--light-color);
+    background: var(--dark-color);
+    opacity: 0.9;
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 0.5rem;
+}
+/* section-1 styling end */
+
+/* section-2 card styling */
+#section-2 .container{
+    padding: 0.5rem;
+    display: flex;
+}
+.container .card{
+    padding: 0.5rem;
+    background: var(--secondary-color);
+    width: 50%;
+    margin: 0.5rem;
+    text-align: center;
+}
+.container .card img{
+    width: 100%;
+}
+.container .card h3 a{
+    text-decoration: none;
+    color: var(--dark-color);
+}
+/* section-2 card styling end */
+
+/* section-3 discount card styling  */
+#section-3 .row{
+    padding: 1rem;
+    display: flex;
+}
+#section-3  .column{
+    display: flex;
+    background: var(--card-color);
+}
+#section-3 .column .column-1{
+   align-items: center;
+}
+#section-3 .column .column-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    color: var(--light-color);
+ }
+ .column-2 h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+ }
+ .column-2 p{
+    margin-bottom: 0.5rem;
+ }
+ .column-2 a{
+     text-decoration: none;  
+ }
+ 
+/* section-3 discount card styling ends */
+
+/* section-4 category of cloth section */
+#section-4{
+    background-color: var(--skin-color);
+    margin: 1rem;
+}
+#section-4 h1{
+    padding: 0.5rem;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+}
+#section-4 .row{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+    padding: 1rem;
+
+}
+#section-4 .column img{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 400px;
+}
+#section-4 .column img:hover{
+    opacity: 0.8;
+}
+#section-4 .column h2{
+    text-align: center;
+    color: var(--dark-color);
+}
+#section-4 .column h2:hover{
+    cursor: pointer;
+}
+/* section-4 category of cloth section end*/
+
+/* display section styling (men&women)*/
+.display{
+    background-color: var(--light-color);
+    margin: 1rem;
+}
+.display h1{
+    padding: 0.5rem;
+    color: var(--light-color);
+    text-align: center;
+    background-color: var(--card-color);
+}
+.display .row{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 1rem;
+}
+.display .column img{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 370px;
+}
+.display .column img:hover{
+    opacity: 0.9;
+}
+.column .details{
+   width: 370px;
+   display: flex;
+   /* align-items: center; */
+   justify-content: space-between;
+}
+.column .details:hover{
+    cursor: pointer;
+}
+.column .details i{
+    margin: 1rem;
+    padding: 0.5rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 1px solid var(--skin-color);
+    border-radius: 50%;
+}
+.column .details i:hover{
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    border: 1px solid var(--dark-color);
+}
+.column .details del{
+    margin: 0 0.5rem;
+    color: rgb(109, 108, 108);
+}
+.column .details span{
+    color: green;
+}
+/* display styling end */
+
+/* footer styling */
+footer{
+    background-color: var(--card-color);
+    color: var(--footer-font-color);
+    height: 100%;
+}
+footer img{
+    width: 300px;
+    margin: 0 0 0 500px;
+}
+.footer-col{
+    display: flex; 
+    /* padding: 1rem; */
+    margin: 1rem;
+    border-bottom: 2px solid var(--footer-font-color);
+    
+}
+.footer-col .col{
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+     line-height: 1.4;
+     flex: 1;
+     padding: 1rem 2rem;
+     
+}
+.footer-col ul li{
+    list-style: none;
+}
+.footer-row{
+    padding: 1rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10%;
+}
+.footer-row .mail h4{
+    display: inline;
+    margin: 0 1rem;
+}
+.footer-row .mail input{
+    padding: 0.5rem;
+    width: 250px;
+    margin: 0 0.25rem;
+}
+.footer-row .handles i{
+    padding: 0.5rem;
+}
+.footer-row .handles i:hover{
+    color: var(--dark-color);
+}
+footer p{
+    text-align: center;
+    margin-top: 0.75rem;
+}
+/* footer styling end */
